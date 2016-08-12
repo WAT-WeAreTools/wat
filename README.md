@@ -41,6 +41,7 @@
 * ES2015
 * PG
 * KNEX
+* Avatar API
 
 # Feature List
 
