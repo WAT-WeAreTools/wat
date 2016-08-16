@@ -7,3 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+
+// app.get('/', function(req, res){
+//   res.render('index', { user: req.user });
+// });
