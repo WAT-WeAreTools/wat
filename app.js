@@ -4,9 +4,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var GitHubStrategy = require('passport-github2').Strategy;
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var BearerStrategy = require('passport-http-bearer').Strategy;
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+var routes = require('./express/routes/index');
+var api = require('./express/routes/api');
+var auth = require('./express/routes/auth');
 
 var app = express();
 
@@ -20,10 +25,22 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(methodOverride());
+app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
+// Initialize Passport!  Also use passport.session() middleware, to support
+// persistent login sessions (recommended).
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) { return next(); }
+  res.redirect('/login')   // make sure this redirects to our login page
+}
+
 app.use('/', routes);
-app.use('/users', users);
+app.use('/api', api);
+app.use('/auth', auth);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
