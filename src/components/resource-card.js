@@ -5,20 +5,18 @@ import FlatButton from 'material-ui/FlatButton';
 const ResourceCard = () => (
   <Card>
     <CardHeader
-      title="Without Avatar"
-      subtitle="Subtitle"
+      title="Eloquent JavaScript"
+      subtitle="JS Bible"
       actAsExpander={true}
       showExpandableButton={true}
+      avatar="images/elojs.png"
     />
     <CardActions>
-      <FlatButton label="Action1" />
-      <FlatButton label="Action2" />
+      <a href="http://eloquentjavascript.net/"><FlatButton label="Elo Js"  /></a>
+      
     </CardActions>
     <CardText expandable={true}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+      This is a book about JavaScript, programming, and the wonders of the digital.
     </CardText>
   </Card>
 );
