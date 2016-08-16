@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>WAT</title>
-  </head>
-  <body>
-    
+</head>
 
-    <div id='app'></div>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" alt="Brand" src="images/logo.png">
+                </a>
+                <div class="header-text">
+                    <div class="title">
+                        <a class="navbar-brand" href="#">W.A.T.</a>
+                        <p>We Are Tools</p>
+                    </div>
+                    <p>Tools for learning web development. Ranked by users, so you can quickly find the best stuff out there.</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 sidebar">
+                <p>Stuff stuff and more stuff</p>
+            </div>
+
+            <div class="col-md-7" id='app'></div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
     <script src="bundle.js"></script>
-  </body>
+</body>
+
 </html>
