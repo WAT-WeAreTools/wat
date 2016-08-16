@@ -2,7 +2,7 @@ import React from 'react';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
-const CardExampleExpandable = () => (
+const ResourceCard = () => (
   <Card>
     <CardHeader
       title="Without Avatar"
@@ -23,4 +23,4 @@ const CardExampleExpandable = () => (
   </Card>
 );
 
-export default CardExampleExpandable;
+export default ResourceCard;
