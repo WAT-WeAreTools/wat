@@ -6,7 +6,7 @@ module.exports = {
   entry: [ //where webpack is gonna look for our files
     'webpack-dev-server/client?http://127.0.0.1:8080/', //port
     'webpack/hot/only-dev-server', //live re-loading
-    './public/src' // folder where webpack is looking for initial file(default index.js)
+    './public/src/app.js' // folder where webpack is looking for initial file(default index.js)
   ],
   output: { // where it will output our files or for production or you can use webpack dev server
     path: path.join(__dirname, 'public'),
