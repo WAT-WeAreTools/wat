@@ -22,7 +22,8 @@
     "pg": "^6.1.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-tap-event-plugin": "^1.0.0"
+    "react-tap-event-plugin": "^1.0.0",
+    "webpack-build": "^1.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.13.2",
