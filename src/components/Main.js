@@ -14,7 +14,7 @@ class Main extends React.Component {
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
       <div>
         <h1>JavaScript</h1>
-        <ResourceCard  />
+        <ResourceCard />
         <h1></h1>
         <FunFun />
       </div>
