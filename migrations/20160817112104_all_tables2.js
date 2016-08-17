@@ -6,6 +6,7 @@ exports.up = function(knex, Promise) {
 			table.integer('type_id').references('resource_type.id').onDelete('CASCADE');
 			table.integer('person_id').references('person.id').onDelete('CASCADE');
 			table.string('title');
+      table.text('image_url');
 			table.string('url');
 			table.integer('votes');
 			table.string('description');
@@ -35,10 +36,17 @@ exports.up = function(knex, Promise) {
 
 exports.down = function(knex, Promise) {
 	return Promise.all([
-		knex.schema.dropTableIfExists('resource'),
-		knex.schema.dropTableIfExists('comment'),
-		knex.schema.dropTableIfExists('person'),
-		knex.schema.dropTableIfExists('category'),
-		knex.schema.dropTableIfExists('resource_type')
+		knex.raw('DROP TABLE resource CASCADE'),
+		knex.raw('DROP TABLE comment CASCADE'),
+		knex.raw('DROP TABLE person CASCADE'),
+		knex.raw('DROP TABLE category CASCADE'),
+		knex.raw('DROP TABLE resource_type CASCADE')
 	]);
 };
+
+
+// knex.schema.dropTableIfExists('resource'),
+// knex.schema.dropTableIfExists('comment'),
+// knex.schema.dropTableIfExists('person'),
+// knex.schema.dropTableIfExists('category'),
+// knex.schema.dropTableIfExists('resource_type')
