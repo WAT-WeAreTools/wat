@@ -116,9 +116,14 @@ exports.seed = function(knex, Promise) {
                         category_id: findCategory('javascript', data[1]),
                         type_id: findType('video', data[2]),
                         person_id: findPerson('Wat', data[0]),
+<<<<<<< HEAD
+                        title: 'Latent flip',
+                        url: 'http://latentflip.com/loupe,
+=======
                         image_url: 'http://www.appsdev.is.ed.ac.uk/blog/wp-content/uploads/2015/03/Event-loop.png',
                         title: 'JavaScript Event Loop',
                         url: 'http://latentflip.com/loupe/',
+>>>>>>> 2b4c776594d01909aadcd38d0630dc6dcee1f355
                         votes: 10,
                         description: 'Loupe is a little visualisation to help you understand how JavaScript\'s call stack/event loop/callback queue interact with each other.',
                         is_free: true

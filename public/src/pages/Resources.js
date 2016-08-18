@@ -2,18 +2,21 @@ import React from 'react';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import ResourceCard from './resource-card';
-import FunFun from './funfun';
+import {Link} from 'react-router';
+import ResourceCard from '../components/resource-card';
+import FunFun from '../components/funfun';
 
 
-class Main extends React.Component {
+class Resources extends React.Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
       <div>
         <h1>JavaScript</h1>
+        <Link to="resources">Resources</Link>
         <ResourceCard />
-        <FunFun />
+        <h1>popcorn</h1>
+        
       </div>
 
        </MuiThemeProvider>
@@ -21,4 +24,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default Resources;
