@@ -28,6 +28,7 @@ render(){
                 </div>
             </div>
         </div>
+        {this.props.children}
       </div>
     );
     }
