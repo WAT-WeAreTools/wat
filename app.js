@@ -7,13 +7,15 @@ var GitHubStrategy = require('passport-github2').Strategy;
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var BearerStrategy = require('passport-http-bearer').Strategy;
-var session = require('express-session')
+var session = require('express-session');
 
 var routes = require('./express/routes/index');
 var auth = require('./express/routes/auth');
 var account = require('./express/routes/account');
 var login = require('./express/routes/login');
 var logout = require('./express/routes/logout');
+var resources = require('./express/routes/resources');
+var categories = require('./express/routes/categories');
 
 var app = express();
 
@@ -33,6 +35,8 @@ app.use('/auth', auth);
 app.use('/account', account);
 app.use('/login', login);
 app.use('/logout', logout);
+app.use('/resources', resources);
+app.use('/categories', categories);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
